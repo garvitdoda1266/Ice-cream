@@ -1,0 +1,136 @@
+<%- include('header.ejs') %>
+
+
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>My Profile</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="product-content-right">
+                        <div class="woocommerce">
+
+                            <form action="/saveprofile" method="post">
+
+                                <div id="customer_details">
+                                    <div class="">
+                                        <div class="woocommerce-billing-fields">
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p id="billing_email_field"
+                                                        class="form-row form-row-first validate-required validate-email">
+                                                        <label class="" for="billing_email">Email Address <abbr
+                                                                title="required" class="required">*</abbr>
+                                                        </label>
+                                                        <input type="text" value="<%=details.email%>" placeholder=""
+                                                            id="email" name="email" class="input-text ">
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p id="billing_phone_field"
+                                                        class="form-row form-row-last validate-required validate-phone">
+                                                        <label class="" for="billing_phone">Name<abbr title="required"
+                                                                class="required">*</abbr>
+                                                        </label>
+                                                        <input type="text" value="<%=details.name%>" placeholder=""
+                                                            id="name" name="name" class="input-text ">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-md-6">
+                                                    <p>
+                                                        <label class="" for="billing_country">Country <abbr
+                                                                title="required" class="required">*</abbr>
+                                                        </label>
+                                                        <select class="country_to_state country_select" id="country"
+                                                            name="country">
+                                                            <option selected="selected" value="India">India
+                                                            </option>
+                                                        </select>
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p id="billing_city_field"
+                                                        class="form-row form-row-wide address-field validate-required"
+                                                        data-o_class="form-row form-row-wide address-field validate-required">
+                                                        <label class="" for="billing_city">Town/City <abbr
+                                                                title="required" class="required">*</abbr>
+                                                        </label>
+                                                        <input type="text" value="<%=details.city%>"
+                                                            placeholder="Town / City" id="city" name="city"
+                                                            class="input-text ">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-md-6">
+                                                    <p id="billing_address_1_field"
+                                                        class="form-row form-row-wide address-field validate-required">
+                                                        <label class="" for="billing_address_1">State <abbr
+                                                                title="required" class="required">*</abbr>
+                                                        </label>
+                                                        <input type="text" value="<%=details.state%>"
+                                                            placeholder="State" id="stae" name="state"
+                                                            class="input-text ">
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p id="billing_postcode_field"
+                                                        class="form-row form-row-last address-field validate-required validate-postcode"
+                                                        data-o_class="form-row form-row-last address-field validate-required validate-postcode">
+                                                        <label class="" for="billing_postcode">Password <abbr
+                                                                title="required" class="required">*</abbr>
+                                                        </label>
+                                                        <input type="text" value="<%=details.password%> " id="password"
+                                                            name="password" class="input-text ">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="order_review" style="position: relative;">
+                                    <div id="payment">
+                                        <div class="form-row place-order">
+
+                                            <!-- <input type="hidden" value="" name="_csrf"> -->
+                                            <button type="submit">Save Changes</button>
+                                            <input type="hidden" name="userid" value="<%= details._id %>">
+
+
+
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('footer.ejs')%>

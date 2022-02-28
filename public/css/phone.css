@@ -1,0 +1,114 @@
+
+#navigation{
+      
+}
+#navbar{
+    flex-direction: column;
+    
+}
+#navbar ul li a{
+    font-size: 1 rem;
+    padding:0px 4px;
+}
+#navbar::before{
+    height:100px;
+}
+
+#logo img{
+    border-radius: 200px;
+    height:30px ;
+    width:30px;
+}
+#home{
+     height:400px;
+     padding:13px;
+
+}
+#home::before{
+    height:500px;
+}
+
+#home p{
+    font-size: 13px;
+}
+.abc{
+    margin-top:50px;
+}
+#services{
+    flex-direction: column;
+    padding-top: 0px;;
+}
+
+#services .box{
+   padding:14px;
+   margin:2px 0px;
+   margin-bottom: 20px;
+}
+#services .box img{
+    height:120px;
+    width:120px;
+    margin:auto;
+    display:block;
+}
+
+.clients{
+    flex-wrap:wrap;
+
+}
+.clients img{
+    height:40px;
+    width:66px;
+    padding :10px;
+}
+#client-section{
+    height:300px;
+}
+.h-primary{
+    font-size: 26px;;
+}
+#contact-box input[type='submit']{
+    width:100px;
+    align:center;
+    margin-left:50px;
+    background-color: black;
+    color:white;
+}
+
+.are{
+    display:flex;
+    margin:0px;
+    width:20%;
+    height:270px;
+    padding:20px;
+    font-size:12px;
+    font-family: 'Baloo Tamma 2', cursive;
+    background-color: rgb(170, 139, 253);
+    box-shadow:3px 3px 40px rgb(245, 14, 206);
+    border-radius:40px;
+    animation-name:hut;
+    animation-duration:7s;
+    animation-iteration-count:infinite;
+
+}
+@keyframes hut{
+    from{
+        width:200px;
+    }
+    to{
+        width:320px;
+    }
+
+
+}
+.lop{
+    font-size:15px;
+    text-align:center;
+    padding:20px;
+
+}
+.lop button{
+    background-color: rgb(240, 16, 16);
+    width:100px;
+    height:20px;
+    cursor:pointer;
+}

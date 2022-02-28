@@ -1,0 +1,104 @@
+<%- include('header.ejs') %>
+
+
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Categories</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="single-product-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="border:2px solid black">
+                    <div class="single-sidebar">
+                        <form action="/filterproducts" method="POST" style="padding-top:40px">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                                        name="price" id="price">
+                                        <option selected value="0">Price less than</option>
+                                        <option value="50">50</option>
+                                        <option value="200">200</option>
+                                        <option value="300">300</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                                        name="company" id="company">
+                                        <option selected value="0">Company</option>
+                                        <option value="amul">Amul</option>
+                                        <option value="2">Mother dairy</option>
+                                        <option value="3">Vadilal</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit">Add Filter</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="product-content-right">
+                        <div class="woocommerce">
+                            <div class="maincontent-area">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="latest-product">
+                                                <div class="product-carousel">
+                                                    <% for(product of p){%>
+                                                        <div class="single-product">
+                                                            <div class="product-f-image">
+                                                                <img src="<%=product.imageurl%>" alt="">
+                                                                <div class="product-hover">
+                                                                    <a href="/addcartvialink/<%=product._id%>"
+                                                                        class="add-to-cart-link"><i
+                                                                            class="fa fa-shopping-cart"></i> Add
+                                                                        to
+                                                                        cart</a>
+
+
+                                                                    <a href="/seedetails/<%=product._id%>"
+                                                                        class="view-details-link"><i
+                                                                            class="fa fa-link"></i>
+                                                                        See details</a>
+                                                                </div>
+                                                            </div>
+
+                                                            <h2><a href="single-product.html">
+                                                                    <%=product.name%>
+                                                                </a></h2>
+
+                                                            <div class="product-carousel-price">
+                                                                <ins>
+                                                                    $<%=product.price%>
+                                                                        <!-- </ins> <del>$100.00</del> -->
+                                                            </div>
+                                                        </div>
+                                                        <% }%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('footer.ejs')%>

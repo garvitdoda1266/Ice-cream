@@ -1,0 +1,102 @@
+<%- include('header.ejs') %>
+
+
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Order Details</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Page title area -->
+
+
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="product-content-right">
+                <div class="woocommerce">
+                    <table cellspacing="0" class="shop_table cart">
+                        <thead>
+                            <tr>
+
+                                <th class="product-thumbnail">&nbsp;</th>
+                                <th class="product-name">Product</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-quantity">Quantity</th>
+                                <th class="product-subtotal">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% let total=0; %>
+                                <% order.userdetails.usercart.items.forEach(p=>{
+
+                                    total=total+p.productprice*p.quantity
+                                    %>
+                                    <tr class="cart_item">
+                                        <td class="product-thumbnail">
+                                            <img width="145" height="145" alt="poster_1_up" class="shop_thumbnail"
+                                                src="<%=p.productimageurl%>">
+                                        </td>
+
+                                        <td class="product-name">
+
+                                            <%=p.productname%>
+
+                                        </td>
+
+                                        <td class="product-price">
+                                            <span class="amount">
+                                                <%=p.productprice%>
+                                            </span>
+                                        </td>
+
+                                        <td class="product-quantity">
+                                            <span class="amount">
+                                                <%=p.quantity%>
+                                            </span>
+                                        </td>
+
+                                        <td class="product-subtotal">
+                                            <span class="amount">
+                                                <%=p.quantity*p.productprice%>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <%})%>
+                        </tbody>
+                    </table>
+
+
+                    <div class="col-md-8 cart-collaterals">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-sidebar"></div>
+            <div class="cart_totals ">
+                <h2>Cart Totals</h2>
+
+                <table cellspacing="0">
+                    <tbody>
+                        <tr class="order-total">
+                            <th>Order Total</th>
+                            <td><strong><span class="amount">
+                                        <%= total%>
+                                    </span></strong> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+    <%- include('footer.ejs')%>

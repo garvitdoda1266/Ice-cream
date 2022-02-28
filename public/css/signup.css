@@ -1,0 +1,61 @@
+body {
+    background: #000;
+    background-image: url('https://media.istockphoto.com/photos/ice-cream-scoops-in-cones-with-copy-space-on-blue-picture-id1222009180?k=20&m=1222009180&s=612x612&w=0&h=hA6d9NFckDiz2mUX6Gao3MNgTgMS0WQVKeglkWRTH8Q=');
+    height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+    border: none;
+    height: 600px
+}
+
+.forms-inputs {
+    position: relative
+}
+
+.forms-inputs span {
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 15px
+}
+
+.forms-inputs input {
+    height: 50px;
+    width:100%;
+    border: 2px solid #eee
+}
+
+.forms-inputs input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #000
+}
+
+.btn {
+    height: 50px
+}
+
+.success-data {
+    display: flex;
+    flex-direction: column
+}
+
+.bxs-badge-check {
+    font-size: 90px
+}
+
+#home1{
+    display:flex;
+    flex-direction:column;
+    padding:3px 200px;
+    justify-content: center;
+    align-items: center;
+    height:700px;
+
+}

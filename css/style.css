@@ -1,0 +1,262 @@
+    /*CSS RESET*/
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    :root{
+        --navbar-height:59px;
+    }
+    
+    /* navigation bar  */
+    #navbar{
+        display:flex;
+        align-items: center;
+        position:fixed;
+        width:100%;
+    }
+     
+    /* logo and image  */
+    #logo{
+         margin:23px 23px;
+    
+    }
+    #logo img{
+        border-radius: 200px;
+        height:100px ;
+        width:100px;
+    }
+    
+    #navbar ul{
+        display:flex;
+        font-family: 'Baloo Tamma 2', cursive;
+    }
+    
+    #navbar::before{
+        content:"";
+        background-color: black;
+        position:absolute;
+        opacity:0.4;
+        height:100%;
+        width:100%;
+        z-index:-1;
+    
+    }
+    #navbar ul li{
+        list-style: none;
+        font-size:1.3rem;
+    }
+    #navbar ul li a{
+         color:white;
+        padding:3px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+    
+    }
+    #navbar ul li a:hover{
+        background-color:white;
+        color:black;
+    
+    }
+    
+    #home{
+        display:flex;
+        flex-direction:column;
+        padding:3px 200px;
+        justify-content: center;
+        align-items: center;
+        height:700px;
+    
+    }
+    #home::before{
+        content:"";
+        background: url('image/p2.10.jpg') no-repeat center center/cover;
+        position:absolute; 
+        opacity:0.90;
+        height:100%;
+        width:100%;
+        z-index:-1;
+    
+        
+    }
+    
+    #services{
+        margin:34px;
+        display:flex;
+    
+    }
+    #services .box{
+        border:2px solid brown;
+        padding:34px;
+        margin:3px 6px;
+        border-radius: 28px;
+        background:#f2f2f2;
+        transform:rotate(40deg);
+        transform:translateY(100px);
+    }
+    #services .box img{
+        height:200px;
+        margin:auto;
+        display:block;
+    }
+    .h-primary{
+        font-size:2.5rem;
+        padding:30px;
+        color:rgba(252, 5, 140, 0.712);
+        margin-top:150px;
+        text-shadow: 3px 4px white;
+        align:center;
+        font-family: 'Baloo Tamma 2', cursive;
+    }
+    .h-secondary{
+             font-size:1.8rem;
+             padding;12px;
+             text-align:center;
+             padding:10px;
+    }
+    #home p{
+        color:white;
+        text-align:center;
+        font-size:1.5rem;
+        font-family: 'Baloo Tamma 2', cursive;
+    }
+    
+    .btn{
+        padding:6px 20px;
+        border:2px solid pink;
+        background-color: white;
+        color:black;
+        border-radius: 10px;
+        margin:17px;
+        font-size:15px;
+        cursor:pointer;
+    }
+    .center{
+        text-align: center;
+    }
+    .abc{
+        margin-top:10px;
+        color:rgb(241, 10, 48);
+        text-shadow: 4px 4px 4px rgb(46, 11, 241);
+        font-size:50px;
+    }
+    #services .box:hover{
+        transform:rotate(360deg);
+    }
+    #client-section{
+        height:344px;
+    }
+    #client-section::before{
+        content:"";
+        position:absolute;
+        background:url('image/p2.17.jpg') no-repeat center center/cover;
+        width:100%;
+        height:70%;
+        z-index:-1;
+        opacity:0.4;
+    }
+    .clients img{
+        height:200px;
+    }
+    .client-item{
+        padding:34px;
+    }
+    .clients{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contact{
+        position:relative;
+    }
+    #contact::before{
+        content:"";
+        position:absolute;
+        background:url('image/p2.21.jpg') no-repeat center center/cover;
+        width:100%;
+        height:100%;
+        z-index:-1;
+        opacity:0.5;
+        margin:34px 0px;
+    }
+    #contact-box{
+        display:flex;
+        justify-content: center;
+        align-self: center;
+        padding-bottom: 150px;
+    }
+    #contact-box textarea,#contact-box input{
+        width:100%;
+        padding:0.5rem;
+        border-radius: 9px;
+        padding:10px;
+    }
+    #contact-box input[type='submit']{
+        width:100px;
+        align:center;
+        margin-left:300px;
+        background-color: black;
+        color:white;
+    }
+    #contact-box form{
+        width:40%;
+    }
+    #contact-box label{
+        font-size:1.3em;
+        font-family: 'Bree Serif',serif;
+    }
+    footer{
+        background-color:rgb(228, 228, 250);
+        color:rgb(247, 23, 172);
+        width:100%;
+        margin:0px 0px;
+        position:absolute;
+        height:70%;
+    
+    }
+    .we h1{
+        font-size:60px;
+        text-align:center;
+        text-shadow:3px 4px 5px rgb(23, 85, 177);
+    }
+    .are{
+        display:flex;
+        border:2px solid green;
+        width:40%;
+        height:50%;
+        margin:50px;
+        padding:20px;
+        font-size:18px;
+        font-family: 'Baloo Tamma 2', cursive;
+        background-color: rgb(170, 139, 253);
+        box-shadow:3px 3px 40px rgb(245, 14, 206);
+        border-radius:40px;
+        animation-name:hut;
+        animation-duration:7s;
+        animation-iteration-count:infinite;
+    
+    }
+    @keyframes hut{
+        from{
+            width:600px;
+        }
+        to{
+            width:1300px;
+        }
+    
+    
+    }
+    
+    .lop{
+        font-size:25px;
+        text-align:center;
+        padding:40px;
+    
+    }
+    .lop button{
+        background-color: rgb(240, 16, 16);
+        width:150px;
+        height:50px;
+        cursor:pointer;
+    }

@@ -1,0 +1,86 @@
+<%- include('header.ejs') %>
+
+
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Add Happiness To Your Cart</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <% let c=0; for(product of p){ if(c==4){ break; } c++; %>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-shop-product">
+                            <div class="product-upper">
+                                <img src="<%=product.imageurl%>" height="120px" width="120px">
+                            </div>
+                            <h2><a href="">
+                                    <%=product.name%>
+                                </a></h2>
+                            <div class="product-carousel-price">
+                                <ins>
+                                    <%=product.price%>
+                                </ins>
+                                <!-- <del>$999.00</del> -->
+                            </div>
+                            <div class="product-carousel-price">
+                                <ins>
+                                    <%=product.company%>
+                                </ins>
+                                <!-- <del>$999.00</del> -->
+                            </div>
+
+                            <div class="product-option-shop">
+                                <form action="/cart" method="post">
+                                    <!-- <input type="hidden" value="" name="_csrf"> -->
+                                    <button type="submit">Add to Cart</button>
+                                    <input type="hidden" name="productid" value="<%= product._id %>">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <% };%>
+
+
+            </div>
+
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="product-pagination text-center">
+                        <nav>
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+
+    <%- include('footer.ejs')%>
