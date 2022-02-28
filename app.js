@@ -7,7 +7,7 @@ const User = require('./models/user');
 
 const session = require('express-session');
 const mongodbstore = require('connect-mongodb-session')(session);
-const mongo_uri = 'mongodb+srv://garvit:garvit@cluster0.nwnew.mongodb.net/icecream';
+const mongo_uri = '';
 
 const flash = require('connect-flash');
 
